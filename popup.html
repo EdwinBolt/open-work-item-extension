@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Open Work Item</title>
+    <style>
+      body { font-family: system-ui, sans-serif; width: 260px; padding: 12px; }
+      h3 { margin: 0 0 8px; font-size: 16px; }
+      input { width: 100%; padding: 6px; font-size: 14px; }
+      .hint { margin-top: 8px; color: #666; font-size: 12px; }
+      .row { display: flex; align-items: center; justify-content: space-between; }
+      .link { font-size: 12px; text-decoration: none; color: #0b57d0; }
+      .url { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 160px; display: inline-block; vertical-align: bottom; }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <h3>Open Work Item</h3>
+      <a class="link" href="#" id="optionsLink" title="Configure base URL">Options</a>
+    </div>
+    <input id="workitem" type="number" placeholder="Type ID and press Enter" autofocus />
+    <div class="hint">Base URL: <span id="baseUrlPreview" class="url" title=""></span></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

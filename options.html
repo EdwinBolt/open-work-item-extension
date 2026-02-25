@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Open Work Item — Options</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 720px; margin: 24px auto; padding: 0 16px; }
+      label { display: block; margin-bottom: 6px; font-weight: 600; }
+      input[type="text"] { width: 100%; padding: 8px; font-size: 14px; }
+      .row { margin: 16px 0; }
+      .hint { color: #666; font-size: 12px; margin-top: 6px; }
+      button { padding: 8px 14px; font-size: 14px; cursor: pointer; }
+      .ok { color: #0a7; margin-left: 8px; display: none; }
+      code { background: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h2>Open Work Item — Options</h2>
+    <p>Set the base URL used to open work items. Example:</p>
+    <p><code>https://dev.azure.com/&lt;org&gt;/&lt;project&gt;/_workitems/edit/</code></p>
+    <p><code>https://&lt;org&gt;.atlassion.com/browse//&lt;project&gt;-</code></p>
+
+    <div class="row">
+      <label for="baseUrl">Base URL</label>
+      <input id="baseUrl" type="text" placeholder="https://dev.azure.com/org/project/_workitems/edit/" />
+      <div class="hint">
+        The extension will append your numeric ID after this path. It’s OK if you forget the trailing slash—we’ll add it.
+      </div>
+    </div>
+
+    <div class="row">
+      <button id="saveBtn">Save</button>
+      <span id="savedMsg" class="ok">Saved ✓</span>
+    </div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
