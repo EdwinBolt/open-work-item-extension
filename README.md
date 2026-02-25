@@ -1,4 +1,4 @@
-This chromium extension can be used for quick access to work items devops/Jira/Similar boards that use the workitem ID in the URL.
+This chromium extension can be used for quick access to work items in Azure DevOps/Jira/Similar boards that use the workitem ID in the URL.
 
 # How to use
 - Click the icon of the extension in your extension bar
