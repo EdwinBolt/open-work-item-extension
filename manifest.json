@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Open Azure DevOps Work Item",
-  "version": "1.3",
+  "version": "1.4",
   "description": "Quickly open a work item in Azure DevOps or Jira by entering its ID (configurable base URL).",
   "icons": {
 	"16": "assets/icons/icon16.png",

@@ -11,6 +11,16 @@
       .row { display: flex; align-items: center; justify-content: space-between; }
       .link { font-size: 12px; text-decoration: none; color: #0b57d0; }
       .url { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 160px; display: inline-block; vertical-align: bottom; }
+	  
+	  button { 
+      width: 100%; 
+      padding: 8px; 
+      margin-top: 10px; 
+      font-size: 14px; 
+      cursor: pointer; 
+      }
+       .hint { margin-top: 8px; color: #666; font-size: 12px; }
+
     </style>
   </head>
   <body>
@@ -19,6 +29,7 @@
       <a class="link" href="#" id="optionsLink" title="Configure base URL">Options</a>
     </div>
     <input id="workitem" type="number" placeholder="Type ID and press Enter" autofocus />
+	  <button id="openNewTabBtn">Open in new tab</button>
     <div class="hint">Base URL: <span id="baseUrlPreview" class="url" title=""></span></div>
 
     <script src="popup.js"></script>

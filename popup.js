@@ -3,6 +3,7 @@
 
   const input = document.getElementById("workitem");
   const baseUrlPreview = document.getElementById("baseUrlPreview");
+  const openNewTabBtn = document.getElementById("openNewTabBtn");
   const optionsLink = document.getElementById("optionsLink");
 
   // Load baseUrl from storage
@@ -16,6 +17,24 @@
     baseUrlPreview.textContent = url;
     baseUrlPreview.title = url;
   }
+  
+  
+  // Button → open in NEW tab
+  openNewTabBtn.addEventListener("click", () => {
+    const id = input.value.trim();
+    if (!id) return;
+
+    loadBaseUrl((baseUrl) => {
+      if (!baseUrl) return;
+
+      const url = baseUrl.replace(/\/$/, "") + "/" + encodeURIComponent(id);
+
+      chrome.tabs.create({ url }); // opens in new tab
+
+      window.close();
+    });
+  });
+
 
   // Open options page
   optionsLink.addEventListener("click", (e) => {
