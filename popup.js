@@ -56,13 +56,18 @@
         // Ensure baseUrl ends with a slash
         if (!/\/$/.test(baseUrl)) baseUrl += "/";
         const url = baseUrl + encodeURIComponent(id);
-
-        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-          if (tabs && tabs[0]) {
-            chrome.tabs.update(tabs[0].id, { url });
-          }
-          window.close();
-        });
+		
+		if (e.ctrlKey){
+			chrome.tabs.create({ url });
+		} else {			
+			chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+			  if (tabs && tabs[0]) {
+				chrome.tabs.update(tabs[0].id, { url });
+			  }
+		  });
+		}
+		
+		window.close();
       });
     }
   });
